@@ -1,0 +1,14 @@
+.skill {
+    width: fit-content;
+    color: white;
+    text-align: center;
+    width: 150px;
+    border-radius: 10px;
+    border: 1px solid white;
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.8);
+    padding: 15px 10px;
+}
+
+.skills-container {
+    display: flex;
+}

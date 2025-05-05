@@ -1,0 +1,16 @@
+<div>
+    <h3>
+        Habilidades técnicas
+    </h3>
+
+    <div class="skills-container d-flex flex-row gap-4 flex-wrap justify-content-center">
+        @for(skill of skills;track $index){
+        <div class="skill d-flex flex-column justify-content-center align-items-center gap-2">
+            <img src="assets/img/{{skill.name}}.png" alt="{{skill.name}} image" height="50" class="skill-icon">
+            <h4>{{skill.name}}</h4>
+        </div>
+        }
+
+    </div>
+
+</div>

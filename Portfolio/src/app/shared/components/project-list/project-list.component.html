@@ -1,0 +1,68 @@
+<div>
+    <h3>Projectos</h3>
+    <div class="d-flex flex-md-row flex-column-reverse gap-4 p-4 align-items-centers">
+
+
+        <!-- contnedor con imagenes del proyecto seleccionado -->
+        <div class="project-image-container">
+
+
+            <div id="carouselProjectImages" class="carousel slide">
+                <div class="carousel-inner">
+                    @for(elemento of imagenesProjectoSeleccionado;track $index){
+                    <div class="carousel-item" [ngClass]="{'active': $index == 1}">
+                        <img src="{{elemento.src}}" class="d-block w-100">
+                    </div>
+                    }
+
+
+                </div>
+                <button class="carousel-control-prev " type="button" data-bs-target="#carouselProjectImages"
+                    data-bs-slide="prev">
+
+
+                    <span class="material-symbols-outlined icon-shadow">
+                        arrow_back_ios
+                    </span>
+
+
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselProjectImages"
+                    data-bs-slide="next">
+                    <span class="material-symbols-outlined icon-shadow">
+                        arrow_forward_ios
+                    </span>
+                </button>
+            </div>
+
+
+
+        </div>
+
+        <!-- Contenedor con los posibles proyectos -->
+        <div class="h-100 flex-grow-1 project-details">
+
+            <div
+                class="project-list-container d-flex flex-column gap-3 justify-content-center align-items-center position-relative">
+
+
+                @for(elemento of listaProyectos;track $index){
+                <div class="project-list-item d-flex flex-row gap-3 project-name-container position-absolute "
+                    (click)="onProjectSelected($index)" [ngStyle]="{ 'left': 
+                    ($index) * 60+'px', 'top': '-30px' }">
+
+                    Proyecto {{$index+1}}
+                </div>
+                }
+
+
+                <div class="project-description-container d-flex flex-column">
+                    <h5>{{proyectoSeleccionado.nombre}}</h5>
+                    <p [innerText]="proyectoSeleccionado.descripcion"></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,73 @@
+<div class="main-container">
+
+    <!--  TODO crear botones fijos a la derecha que lleve a la parte del scroll (ej un boton que lleve a habilidades técnicas) (que sea un icono que en el hover se agrande con el apartado y cambie el color) -->
+
+    <div class="section-nav d-flex flex-column gap-3  align-items-end">
+        <div class="section-nav-item d-flex flex-row-reverse nav-sobre-mi" (click)="moveToSection('projects')">
+
+            <i class="fa-solid fa-user text-center"></i>
+            <div class="section-nav-text ">Sobre mí</div>
+        </div>
+        <div class="section-nav-item d-flex flex-row-reverse nav-habilidades" (click)="moveToSection('skills')">
+
+            <i class="fa-solid fa-code"></i>
+            <div class="section-nav-text">Habilidades</div>
+        </div>
+        <div class="section-nav-item d-flex flex-row-reverse nav-projectos" (click)="moveToSection('projects')">
+
+            <i class="fa-solid fa-briefcase"></i>
+            <div class="section-nav-text">Projectos</div>
+        </div>
+    </div>
+
+
+    <section>
+
+        <div class="home-transition">
+            <div class="home-loader">
+
+            </div>
+
+        </div>
+
+        <div class="d-flex justify-content-between ">
+
+            <div class="title" style="color: white;">
+
+                <h1 class="fade-in-bottom  ">
+                    Codificando el <span class="text-color-change">futuro</span>, un proyecto a la vez.
+                </h1>
+                <div class="fade-in-bottom-name">
+                    <p>Mikel Pérez </p>
+                </div>
+
+
+                <div class="icons ">
+                    <a href="https://github.com/MikelPerez07" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="section-separation overflow-hidden" appScrollProgress id="skills">
+        <app-skills />
+    </section>
+
+
+    <section appScrollProgress id="projects" class="section-separation overflow-hidden section-carousel">
+        <!-- Seccion de los projectos  -->
+        <app-project-list />
+
+    </section>
+
+
+    <section appScrollProgress>
+        <div style="height: 800px; background-color: red;">asd</div>
+    </section>
+
+
+</div>

@@ -1,0 +1,226 @@
+.main-container {
+    padding: 0 10%;
+}
+
+.home-transition {
+    background-color: white;
+
+}
+
+.home-loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    border-radius: 50%;
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    animation: loader-animation 0.7s 0.1s 1 ease-out forwards;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.title {
+    font-weight: 700;
+    margin-top: 16rem;
+    max-width: 700px;
+    font-size: 1.8rem;
+
+}
+
+.icons {
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: -1rem;
+}
+
+.icons i {
+    font-size: 2rem;
+    color: white;
+    opacity: 0;
+    animation: fade-in-animation 0.5s 2.1s ease-in forwards;
+
+}
+
+
+
+.text-color-change {
+
+    animation: text-color-change-animation 5s linear infinite;
+}
+
+
+.section-nav {
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+
+}
+
+.section-nav-item {
+    display: flex;
+    color: white;
+    border-radius: 100px;
+    border: 1px solid white;
+    padding: 0.4rem;
+    transition: width 0.3s ease-in-out;
+    width: 40px;
+    white-space: nowrap;
+    cursor: pointer
+}
+
+.section-nav-item:hover {
+    background-color: white;
+    color: black;
+    width: 160px;
+}
+
+.section-nav-text {
+
+    max-width: 0;
+    height: 0;
+    overflow: hidden;
+    color: black;
+    text-align: center;
+    width: 100%;
+
+
+
+}
+
+.section-nav-item:hover div {
+
+    max-width: 100%;
+    height: auto;
+}
+
+.section-nav-item i {
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    transform: translateY(15%);
+}
+
+.section-separation {
+    margin-top: 16rem;
+}
+
+.nav-sobre-mi {
+    opacity: 0;
+    animation: fade-in-animation 0.5s 2.5s ease-in forwards;
+}
+
+.nav-habilidades {
+    opacity: 0;
+    animation: fade-in-animation 0.5s 2.7s ease-in forwards;
+}
+
+.nav-projectos {
+    opacity: 0;
+    animation: fade-in-animation 0.5s 2.9s ease-in forwards;
+}
+
+.fade-in-bottom {
+    opacity: 0;
+    animation: fade-in-animation 0.5s 1s ease-in forwards;
+}
+
+.fade-in-bottom-name {
+    opacity: 0;
+    animation: fade-in-animation 0.5s 1.6s ease-in forwards;
+}
+
+
+
+[appScrollProgress] {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+@keyframes fade-in-animation {
+
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+
+    50% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
+
+}
+
+@keyframes text-color-change-animation {
+    0% {
+        color: #f8aec0;
+    }
+
+    10% {
+        color: #f8aec0
+    }
+
+    30% {
+        color: #c5c5f8;
+    }
+
+    50% {
+        color: #91b6fc;
+    }
+
+    70% {
+        color: #a8f8ef;
+    }
+
+    90% {
+        color: #ddf699;
+    }
+
+    100% {
+        color: #f8aec0;
+    }
+
+}
+
+
+@keyframes loader-animation {
+    0% {
+        transform: scale(1);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(20);
+        opacity: 1;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+    .main-container {}
+
+    .title {
+        font-size: 1.2rem;
+        margin-top: 10rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-container {}
+
+    .title {
+        font-size: 1rem;
+        margin-top: 8rem;
+    }
+}
