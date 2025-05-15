@@ -4,18 +4,18 @@
   "newProjectRoot": "projects",
   "projects": {
     "Portfolio": {
-      "projectType": "server",
+      "projectType": "application",
       "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/portfolio",
             "index": "src/index.html",
-            "main": "src/main.ts",
+            "browser": "src/main.ts",
             "aot": true,
             "polyfills": [
               "zone.js"

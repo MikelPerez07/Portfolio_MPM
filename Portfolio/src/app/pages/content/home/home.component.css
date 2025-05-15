@@ -1,13 +1,17 @@
 .main-container {
-    padding: 0 10%;
+    padding: 0 1rem;
+    width: 100%;
+    animation: blacken-background-animation 0.7s 1s 1 ease-out forwards;
 }
 
 .home-transition {
     background-color: white;
+    overflow: hidden;
 
 }
 
 .home-loader {
+
     position: fixed;
     top: 50%;
     left: 50%;
@@ -24,7 +28,7 @@
 
 .title {
     font-weight: 700;
-    margin-top: 16rem;
+
     max-width: 700px;
     font-size: 1.8rem;
 
@@ -36,6 +40,7 @@
     align-items: center;
     gap: 1rem;
     margin-top: -1rem;
+
 }
 
 .icons i {
@@ -72,7 +77,8 @@
     transition: width 0.3s ease-in-out;
     width: 40px;
     white-space: nowrap;
-    cursor: pointer
+    cursor: pointer;
+    background-color: black;
 }
 
 .section-nav-item:hover {
@@ -108,7 +114,8 @@
 }
 
 .section-separation {
-    margin-top: 16rem;
+    margin-top: 12rem;
+
 }
 
 .nav-sobre-mi {
@@ -140,6 +147,21 @@
 
 [appScrollProgress] {
     transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* 
+ */
+/* Animation keyframes */
+
+@keyframes blacken-background-animation {
+    0% {
+        background-color: black;
+    }
+
+    100% {
+        background-color: black;
+    }
+
 }
 
 @keyframes fade-in-animation {
@@ -206,13 +228,16 @@
 
 }
 
+/* 
+ */
+/* Responsive */
 
 @media (max-width: 768px) {
     .main-container {}
 
     .title {
         font-size: 1.2rem;
-        margin-top: 10rem;
+
     }
 }
 
@@ -221,6 +246,19 @@
 
     .title {
         font-size: 1rem;
-        margin-top: 8rem;
+
+    }
+}
+
+
+@media (min-width: 768px) {
+    .main-container {
+        padding: 0 10%;
+        width: 100%;
+    }
+
+
+    .section-separation {
+        margin-top: 16rem;
     }
 }

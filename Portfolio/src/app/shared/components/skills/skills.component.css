@@ -1,5 +1,5 @@
 .skill {
-    width: fit-content;
+
     color: white;
     text-align: center;
     width: 150px;
@@ -11,4 +11,16 @@
 
 .skills-container {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+@media (min-width: 768px) {
+    .skills-container {}
+
+    .skill {
+        width: 150px;
+    }
+
 }
